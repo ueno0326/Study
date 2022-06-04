@@ -1,0 +1,93 @@
+\documentclass[dvipdfmx]{jsarticle}
+\usepackage[dvipdfmx]{graphicx}
+\graphicspath{{ピクチャ/}}
+\usepackage{otf}
+\usepackage[dvipdfmx]{graphicx}
+\usepackage{amsmath,amssymb}
+\usepackage{url}
+\usepackage{tcolorbox}
+\tcbuselibrary{skins}
+\usepackage{bm}
+\begin{document}
+
+\title{\huge 線積分まとめ}
+\maketitle
+
+\section{スカラー場の線積分}
+
+\subsection{考え方}
+
+針金のように質量をもった曲線で、各点における単位長さあたりの質量(線密度)が異なる曲線の質量を求める。このために、曲線を短い線分からなる折れ線で近似し、一つ一つの線分の長さを$\Delta s$、その部分の線密度を$\phi$とすると、短い線分の質量は$\phi \Delta s$となるから、これらの総和をとり、$\Delta s \to 0$とすれば曲線の質量を求めることができる。これがスカラー場の線積分の考え方である。
+
+下式の左辺の極限が存在するならば右辺のように表し、この極限値を{\Large{曲線Cに沿うスカラー場$\phi$の線積分}}という。
+
+{\large
+\begin{equation}
+\displaystyle  \lim_{n \to \infty} \sum_{k=1}^n \phi(t_k) \Delta s_k =\int_c \phi ds
+\end{equation}
+}
+
+\newtcolorbox{mysimplebox}[1]{%
+ colframe=black, colback=white,
+ coltitle=black, colbacktitle=white,
+ boxrule=0.8pt, arc=0mm
+ fonttitle=\sffamily\bfseries,
+ enhanced,
+ attach boxed title to top left={xshift=10mm,yshift=-3mm},
+ boxed title style={frame hidden},
+ title=#1}
+ 
+\begin{mysimplebox}{スカラー場の線積分}
+曲線Cはスカラー場$\phi$の定義域に含まれているとする。Cが$\bm r$=$\bm r$$(t)$　$(\alpha \le t \le \beta)$と表されるとき、Cに沿うスカラー場$\phi$の線積分について、次が成り立つ。
+
+\begin{equation}
+\displaystyle \int_c \phi ds = \int^{\beta}_{\alpha}\phi(t) |\frac{d\bm r}{dt}|dt
+\end{equation}
+
+
+\end{mysimplebox}
+
+
+特に、$\phi$=1の時、線積分は曲線Cの長さとなる。$s$は線素(スカラー)。
+
+\newpage
+
+
+\section{ベクトル場の線積分}
+
+\subsection{考え方}
+
+点が力を受けながら曲線に沿って移動するとき、力がこの移動に対してなす仕事を求める。このために曲線に沿う移動を折れ線に沿う小さな移動の集まりと近似して考える。小さな移動をベクトル$\Delta \bm r$としてその移動に働く力を$\bm a$とする。この時、移動$\Delta \bm r$に対して力$\bm a$がなす仕事は、$\Delta W = \bm a \cdot \Delta r$となるから、これらの総和をとり、$\bm \Delta r \to 0$とすれば曲線に沿う移動に対して力$\bm a$がなす仕事$W$を求めることができる。これがベクトル場の線積分の考え方。$\bm r$は線素ベクトル(ベクトル)。
+
+\begin{mysimplebox}{ベクトル場の線積分}
+曲線Cはベクトル場$\bm a$の定義域に含まれているとする。Cが$\bm r=r$$(t)$ $(\alpha \le t \le \beta)$と表されているとき、Cに沿うベクトル場$\bm a$の線積分について、次が成り立つ。
+
+\begin{equation}
+\displaystyle \int_c {\bm a} \cdot d{\bm r}=\int_{\alpha}^{\beta}{\bm a}(t)\cdot \frac{d\bm r}{dt}dt
+\end{equation}
+
+\end{mysimplebox}
+
+
+\subsection{逆向きの曲線}
+
+曲線Cに対して逆向きの曲線を-Cと表すと、その曲線に沿うベクトル場の線積分の値は$\displaystyle -\int_c {\bm a} \cdot d\bm r$となる。
+
+\subsection{勾配の線積分}
+ 
+\begin{mysimplebox}{勾配の線積分}
+曲線Cはスカラー場$\phi$の定義域に含まれるものとして、Cの始点をP、終点をQとする。この時、曲線Cに沿うベクトル場
+grad $\phi$の線積分に対して以下が成り立つ。 
+
+\begin{equation}
+\displaystyle \int_c (\mathrm{grad}\phi)\cdot d{\bm r}=\phi(Q)-\phi(P)
+\end{equation}
+
+\end{mysimplebox}
+
+これは、曲線Cに沿うgrad$\phi$の線積分の値が、曲線Cの端点における$\phi$の値だけによって決まり、その経路によらないことを意味する。
+
+ベクトル場$\bm a$に対してgrad$\phi$=$\bm a$となるスカラー場$\phi$が存在するとき、$\phi$を$\bm a$のスカラーポテンシャルという。また、スカラーポテンシャルを持つベクトル場を保存場という。重力場は重力による位置エネルギーをスカラーポテンシャルとする保存場である。保存場$\bm a$の線積分の値は曲線の端点におけるスカラーポテンシャル$\phi$の値だけによって決まる。
+
+
+\end{document}
