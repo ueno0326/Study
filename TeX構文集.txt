@@ -1,0 +1,166 @@
+始まり
+
+\documentclass[dvipdfmx]{jsarticle}
+\usepackage[dvipdfmx]{graphicx}
+\graphicspath{{ピクチャ/}}
+\usepackage{otf}
+\usepackage[dvipdfmx]{graphicx}
+\usepackage{amsmath,amssymb}
+\usepackage{url}
+\begin{document}
+
+
+\end{document}
+--------------------------------------------------------------
+表紙テンプレ
+
+\title{\huge }
+\date{}
+\maketitle
+
+\begin{flushright}
+\vspace{11cm}\Large
+所属:物理・材料理工学科\\数理・物理コース\\
+学籍番号：s0319007\\
+氏名:上野智也\\
+共同実験者：上野健斗\\片野峻太郎\\川瀬悠太\\
+実験実施日：2021/10/27,28\\
+レポート提出日:2021/10/31
+\end{flushright}
+
+\thispagestyle{empty}
+
+\newpage
+ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
+箇条書き
+
+\begin{itemize}
+
+\end{itemize}
+----------------------------------------------------
+画像
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=8cm]{.jpg}
+\caption{}
+\end{figure}%
+----------------------------------------------------
+二枚画像
+
+\begin{figure}[h]
+  \centering
+  \begin{minipage}{0.4\columnwidth}
+    \centering
+    \includegraphics[width=\columnwidth]{.jpg}
+    \caption{}
+  \end{minipage}
+  \begin{minipage}{0.4\columnwidth}
+    \centering
+    \includegraphics[width=\columnwidth]{.jpg}
+    \caption{}
+  \end{minipage}
+\end{figure}
+-------------------------------------------------------
+表
+
+\begin{table}[h]
+  \centering
+    \caption{測定結果}
+    \begin{tabular}{|r|r|r|} \hline
+    
+    \end{tabular}
+    \label{tab:r_1}
+\end{table}
+--------------------------------------------------------
+参考文献
+
+\begin{thebibliography}{9}
+\item
+  
+\item
+  
+\end{thebibliography}    
+--------------------------------------------------------
+中央寄せ
+\begin{center}
+
+\end{center}
+----------------------------------------------------------
+式
+\begin{equation}
+
+\end{equation}
+---------------------------------------------------------------
+行列
+$\begin{matrix}  &  &  &  \\  &  &  &  \\  &  &  &  \end{matrix}$
+
+-----------------------------------------------------------------------
+枠
+↓始まりのやつにかくこと
+\usepackage{tcolorbox}
+\tcbuselibrary{skins}
+
+\newtcolorbox{mysimplebox}[1]{%
+ colframe=black, colback=white,
+ coltitle=black, colbacktitle=white,
+ boxrule=0.8pt, arc=0mm
+ fonttitle=\sffamily\bfseries,
+ enhanced,
+ attach boxed title to top left={xshift=10mm,yshift=-3mm},
+ boxed title style={frame hidden},
+ title=#1}
+ 
+\begin{mysimplebox}{定義}
+ああああ
+\end{mysimplebox}
+------------------------------------------------------------------
+二つ表
+
+\begin{figure}[h]
+  \centering
+  \begin{minipage}{0.4\columnwidth}
+  \centering
+    \caption{測定結果}
+    \begin{tabular}{|r|r|r|} \hline
+    
+    \end{tabular}
+    \label{tab:r_1}
+  \end{minipage}
+  \begin{minipage}{0.4\columnwidth}
+  \centering
+    \begin{tabular}{|r|r|r|} \hline
+    
+    \end{tabular}
+    \label{tab:r_1}
+  \end{minipage}
+\end{figure}
+----------------------------------------------------------
+ボールド体
+
+usepackage{bm}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
